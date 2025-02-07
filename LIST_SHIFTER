@@ -1,0 +1,16 @@
+ if (direction == "left")
+     {
+      List<int> shiftPart = list.GetRange(0, count);
+      list.RemoveRange(0, count);
+      list.InsertRange(list.Count-1, shiftPart);
+
+
+    }
+	else if (direction == "right")
+    {
+      
+      List<int> shiftPart = list.GetRange(list.Count - count, count);
+      list.RemoveRange(list.Count - count, count);
+      list.InsertRange(0, shiftPart);
+
+    }
